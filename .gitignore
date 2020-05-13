@@ -1,0 +1,12 @@
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/misc.xml
+.idea/uiDesigner.xml
+.idea/vcs.xml
+.idea/workspace.xml
+cloud-api-commons/cloud-api-commons.iml
+cloud-consumer-order80/cloud-consumer-order80.iml
+cloud-consumerzk-order80/cloud-consumerzk-order80.iml
+cloud-eureka-server7001/cloud-eureka-server7001.iml
+cloud-provider-payment8004/cloud-provider-payment8004.iml
+cloud2020.iml
