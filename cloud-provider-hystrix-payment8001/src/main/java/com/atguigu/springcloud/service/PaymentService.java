@@ -11,9 +11,7 @@ public class PaymentService {
 
 
     public String paymentInfo_OK(Integer id){
-
         return  "线程池：   " +  Thread.currentThread().getName()+ "  paymentInfo_OK,id:   " + id +"\t" + "O(∩_∩)O哈哈";
-
     }
 
     @HystrixCommand(fallbackMethod = "paymentInfo_TimeOutHandler", commandProperties = {
