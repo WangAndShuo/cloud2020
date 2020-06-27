@@ -1,0 +1,59 @@
+server:
+  port: 3344
+spring:
+  application:
+    name: cloud-config-center  #注册eureka服务器的微服务名称
+  cloud:
+    config:
+      server:
+        git:
+          #这个uri用ssh地址一直都是无法访问，只有改成https地址加privateKey或者显示声明账号密码才有用
+          uri: https://github.com/WangAndShuo/springcloud-config.git #自己GitHub上面的git仓库名字
+      ### 搜索目录
+          search-paths:
+            - springcloud-config
+      ###读取分支
+      label: master
+      username: 1015560223@qq.com
+      password: Dj970524
+      #username: 访问git仓库的用户名,(username和password必须配对使用，否则会报错，代码中写的)
+      #password: 访问git仓库的密码      #passphrase: qinwei # 访问ssh私钥口令
+#      force-pull: true #设置强行pull拉取
+#      ignore-local-ssh-settings: true # If true, use property based SSH config instead of file based.
+#      private-key: |   #这个| 一定要加，后面的私钥一定要写在|所在竖行的后面，注意格式
+#                                           -----BEGIN OPENSSH PRIVATE KEY-----
+#                                           b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABFwAAAAdzc2gtcn
+#                                           NhAAAAAwEAAQAAAQEA3jBWnRIhBi4+dnu0IDIz8DUVkHtbr4LAuQUAX8M5J3XcKaGQtAm6
+#                                           HgADkav2adeRDejNPidOOSdG/3SpnY1NQovtnYdctz+bY+AQzigE+QVfLTUNY9ybG5FpxF
+#                                           D9MNXqKFU/36recYDOTWVqskZSzFbsP0yrclzyTcKUe2YhW5ne+V2hWhMS0dxGJ8k0vGuy
+#                                           YX5rEz0y3cJQyCAmqiIKcOwcrIP61TDAuTl3IjuIkJFELDizRp6XCZGVJg65kKHgrQGzPF
+#                                           3DZ4aeoqQVnrvv3iRzYtpNlldRNvige96gbbe2utW+GxfGSXba0qSGv4OoEpXLTptZ2g0m
+#                                           wN95SLJTgQAAA8i7FSw7uxUsOwAAAAdzc2gtcnNhAAABAQDeMFadEiEGLj52e7QgMjPwNR
+#                                           WQe1uvgsC5BQBfwzknddwpoZC0CboeAAORq/Zp15EN6M0+J045J0b/dKmdjU1Ci+2dh1y3
+#                                           P5tj4BDOKAT5BV8tNQ1j3JsbkWnEUP0w1eooVT/fqt5xgM5NZWqyRlLMVuw/TKtyXPJNwp
+#                                           R7ZiFbmd75XaFaExLR3EYnyTS8a7JhfmsTPTLdwlDIICaqIgpw7Bysg/rVMMC5OXciO4iQ
+#                                           kUQsOLNGnpcJkZUmDrmQoeCtAbM8XcNnhp6ipBWeu+/eJHNi2k2WV1E2+KB73qBtt7a61b
+#                                           4bF8ZJdtrSpIa/g6gSlctOm1naDSbA33lIslOBAAAAAwEAAQAAAQEAtMze3iePaekdeOqG
+#                                           k6BmdTOtHYnT/MjILIZuXH6OtpaIlfPbvTUhFyJpxRMKi+wXJBtpUAdJ9uYINv1mvEbsNJ
+#                                           eKvqIUhyUiPC5rXmZgTYbagP3nrHgqW0+DonVI4oFfbnyYYlg3dGMc/Qvmu7TP0Wl2CrhH
+#                                           1uLdZPtOOe/Mey0BPIKLBJmM8AxPxfCGflXhrMkV6CwnbTKbhEa3EI9DpliayLVdJzqAZ6
+#                                           ZZk/JvXb+1nsfQ41Yxh/CH76gb1jk+RdWZVYQBl6nVrnIENe+e+VIVQEM940a0Ua82jnqG
+#                                           Hvp0i9wte6uijSETXUds93GE+K1b0Bq+fj35YA4O1hdPFQAAAIEAuG67ojpQ+vtFAA3Mtg
+#                                           Pt+6ScMVf1W5mGMMdCxZ3RrFewmB4juN7/pbjspEVf+gaIZesmHMiE23NsMcgV4GcT7fqK
+#                                           VAiziC6KeNzYz+zVvSRMqJzusqPtZDHH14qEOceTFmhWO3VCd5iofWmEjzhcLTnhX+lEK5
+#                                           Kt3VzNYengXq4AAACBAPf4FfHmFozLJsz3aPnnFNyf7zD3/zX+i1T26sVkarh6jEYjLArj
+#                                           63K1h9S8j8QSnJxcVdYyccju+TqVw0KtbuB6gcNmdpqzmOb+ujpwCfXr9QInzkvEgHWe5V
+#                                           vnXIVjnpLqynf068MOO754IHqHnkmGnbo2Wwqk+kA6NkMX79jTAAAAgQDlYoIYDsR4uyZI
+#                                           jhU3gxyMcPs1W4sGv9vEnQDPK8/FuItLm15GQp6qb4RBU7jlJe90db4L0wOeTkadAn7vxi
+#                                           z5UWQQotW0SkjLIiGw8G9aJ94oy8CWY6cxHa1avX0f7vV1+/bRYplCQvnI4L2TDWVSXMeT
+#                                           YAYiqiEMkG19lMZt2wAAABExMDE1NTYwMjIzQHFxLmNvbQ==
+#                                           -----END OPENSSH PRIVATE KEY-----
+#
+
+
+#服务注册到eureka服务器
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka
+
