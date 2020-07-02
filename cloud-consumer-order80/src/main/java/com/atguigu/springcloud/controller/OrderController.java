@@ -56,12 +56,13 @@ public class OrderController
 
     @GetMapping("/consumer/payment/lb")
     public String getPaymentLB(){
+        // 查看该服务名下的服务数量并返回一个列表。
         List<ServiceInstance> instances = discoveryClient.getInstances("cloud-payment-service");
         if(instances == null || instances.size() <= 0){
             return  null;
         }
-        ServiceInstance serviceInstance = loadBalance.instances(instances);
-        URI uri = serviceInstance.getUri();
-        return restTemplate.getForObject(uri+"/payment/lb",String.class);
+        ServiceInstance serviceInstance = loadBalance.instances(instances); //进行负载均衡，选择容器，并并返回服务
+        URI uri = serviceInstance.getUri();  //获取服务地址
+        return restTemplate.getForObject(uri+"/payment/lb",String.class);  //进行Rest请求
     }
 }

@@ -7,7 +7,7 @@ spring:
     name: cloud-payment-service
   cloud:
     zookeeper:
-      connect-string: 192.168.29.130:2181
+      connect-string: 192.168.29.130:2181,39.106.157.58:2181
 
 #
 #  datasource:

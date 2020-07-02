@@ -10,7 +10,6 @@ server:
 #      service-url:
 #      defaultZone:
 
-
 eureka:
   instance:
     hostname: eureka7001.com
