@@ -16,6 +16,29 @@
     <select id="getPaymentById" parameterType="long" resultMap="BaseResultMap">
         select * from payment where id=#{id};
     </select>
+
+    <select id="findParamList"  resultType="com.atguigu.springcloud.domain.UserInfo" parameterType="com.atguigu.springcloud.domain.UserInfo">
+       select * from person  limit #{pageNum}, #{pageSize}
+    </select>
+
+
+
+    <select id="findParamListNum"  resultType="int" >
+        select count(*) from person
+    </select>
+    <!--<select id="getPaymentById" resultMap="BaseResultMap">-->
+    <!--select count(*) from payment -->
+    <!--<where>-->
+    <!---->
+    <!--<if test="id != null || id != ''">-->
+    <!--<foreach collection="list"  item="set" index="index" open="(" separator="," close=")" >-->
+
+    <!--</foreach>-->
+    <!--</if>-->
+    <!--</where>-->
+    <!---->
+    <!---->
+    <!--</select>-->
     <!--    <insert id="create" parameterType="Payment" useGeneratedKeys="true" keyProperty="id">-->
     <!--        insert into payment(serial) values(#{serial});-->
     <!--    </insert>-->

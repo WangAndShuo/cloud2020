@@ -12,6 +12,12 @@ spring:
     url: jdbc:mysql://39.106.157.58:3306/db2019?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=GMT%2B8
     username: root
     password: password
+  redis:
+      host: 39.106.157.58
+      port: 6379
+      database: 0
+      timeout: 2000
+      logintimeout: 604800
 
 
 mybatis:

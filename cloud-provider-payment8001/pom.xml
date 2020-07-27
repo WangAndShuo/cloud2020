@@ -12,6 +12,15 @@
     <artifactId>cloud-provider-payment8001</artifactId>
 
     <dependencies>
+
+        <!-- https://mvnrepository.com/artifact/com.alibaba/easyexcel -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.1.6</version>
+        </dependency>
+
+
         <dependency><!--引用自己定义的api通用包，可以使用payment支付Entity-->
             <groupId>com.atguigu.springcloud</groupId>
             <artifactId>cloud-api-commons</artifactId>
